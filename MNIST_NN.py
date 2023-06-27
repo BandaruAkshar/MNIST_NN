@@ -9,9 +9,9 @@ np.random.shuffle(data)
 
 dataDev = data[0:1000].T
 
-y_test = dataDev[0]
-x_test = dataDev[1:n]
-x_test = x_test / 255
+Y_test = dataDev[0]
+X_test = dataDev[1:n]
+X_test = X_test / 255
 
 dataTrain = data[1000:m].T
 
@@ -117,5 +117,5 @@ def testPredictions(index, w1, b1, w2, b2):
 
 
 w1, b1, w2, b2 = gradientDescent(X_train, Y_train, 0.10, 500)
-devPredictions = makePred(x_test, w1, b1, w2, b2)
-print(f'Test Accuracy:{str(getAccVal(devPredictions, y_test))}')
+devPredictions = makePred(X_test, w1, b1, w2, b2)
+print(f'Test Accuracy:{str(getAccVal(devPredictions, Y_test))}')
