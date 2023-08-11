@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-data = pd.read_csv('mnist_train.csv')
+data = pd.read_csv('mnist_test.csv')
 data = np.array(data)
 m, n = data.shape
 np.random.shuffle(data)
